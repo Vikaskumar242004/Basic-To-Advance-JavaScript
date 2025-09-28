@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Add Item</button>
+    <!-- <source src="script.js" type=""> -->
+    <script>
+
+        //  question number 3 
+
+
+        // here we are defining a local storage that means if we visit a site and then we give our data so on the next
+        // time we visit we don't have to fill the data again it store it by using the method localstorage 
+        // if(localStorage.getItem("name")){
+        //     let a = localStorage.getItem("name")
+        //     document.write("welcome " + a)
+        // } else{
+        //     let a = prompt("Enter your name : ")
+        //     localStorage.setItem("name" , a)
+        //     document.write("Welcome " + a)
+        // }
+
+
+        // and to store the element like a note by using a function
+
+        function savenoteloclastorage(note){
+            localStorage.setItem("note",note)
+        }
+
+        let note = localStorage.getItem("note")
+        if(note){
+        document.querySelector(".note").innerHTML = note
+        }
+        document.querySelector("button").addEventListener
+        ("click", () =>{
+            let note = prompt("Enter your note")
+            savenoteloclastorage(note)
+            document.querySelector(".note").innerHTML = note
+        })
+
+
+    </script>
+</body>
+</html>
